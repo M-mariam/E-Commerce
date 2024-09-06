@@ -1,0 +1,21 @@
+@if (formName.get(controlName)?.errors && formName.get(controlName)?.touched) {
+    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+        <ul>
+            @if (formName.get(controlName)?.getError('required')) {
+                <li>input is required</li>
+            }
+            @if (formName.get(controlName)?.getError('minlength')) {
+                <li>Min length is 3 characters</li>
+            }
+            @if (formName.get(controlName)?.getError('maxlength')) {
+                <li>Max length is 10 characters</li>
+            }
+            @if (formName.get(controlName)?.getError('email')) {
+                <li>Enter Valid Email</li>
+            }
+            @if (formName.get(controlName)?.getError('pattern')) {
+                <li>password is wrong</li>
+            }
+        </ul>
+      </div>
+   }

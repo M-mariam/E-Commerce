@@ -1,0 +1,13 @@
+<div class="container m-auto p-5 ">
+     
+    <h1 class="text-main font-bold text-4xl text-center py-8 my-5">All Brands</h1>
+    <div class="grid grid-cols-3  gap-4">
+                    @for (slide of brands; track $index) {
+                        <div class="flex flex-wrap justify-center brands-border  ">
+                            <img [src]="slide.image" [alt]="slide.name" [title]="slide.name" class="h-[150px] w-full">
+                            <h2 class="text-main body font-semibold text-2xl py-3">{{slide.name}}</h2>
+                        </div>
+                    }           
+    </div>
+
+</div>

@@ -30,14 +30,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",     
+              "./node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-spin.css" 
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "prerender": false
+            ,
+            "ssr": false
           },
           "configurations": {
             "production": {
@@ -58,7 +63,9 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "prerender": false,
+              "ssr": false
             }
           },
           "defaultConfiguration": "production"
@@ -102,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "017d2d7b-d913-4e1f-8ac1-c39528835133"
   }
 }

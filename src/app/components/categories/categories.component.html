@@ -1,0 +1,11 @@
+<div class="container m-auto p-5">
+    <div class="grid grid-cols-3  gap-4">
+                    @for (slide of categories; track $index) {
+                        <div class="flex flex-wrap justify-center product border ">
+                            <img [src]="slide.image" [alt]="slide.name" [title]="slide.name" class="h-[300px] w-full">
+                            <h2 class="text-main body bold text-2xl pt-3">{{slide.name}}</h2>
+                        </div>
+                    }           
+    </div>
+
+</div>
